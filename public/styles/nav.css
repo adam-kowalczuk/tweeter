@@ -12,26 +12,26 @@ nav {
 
 .nav-logo {
   font-family: 'Bungee', cursive;
-  font-size: 2.5em;
+  font-size: 2em;
   align-self: last baseline;
 }
 
-.nav-text-right {
+.nav-right {
   align-self: baseline;
   flex-direction: column;
   text-align: center;
 }
 
-.nav-text-right span {
+.nav-right span {
   font-weight: 600;
 }
 
-.nav-text-right p {
-  font-size: 1.2em;
+.nav-right p {
   margin-bottom: 0;
 }
 
-.nav-text-right i {
+.nav-right i {
+  margin-top: 0;
   color: red;
   align-self: center;
 }
