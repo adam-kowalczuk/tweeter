@@ -1,0 +1,35 @@
+.new-tweet {
+  width: 100%;
+}
+
+#tweet-text {
+  height: 2.5em;
+  width: 100%;
+  background: none;
+  font-size: .75em;
+  font-weight: 600;;
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  border-bottom: 4px solid black;
+  margin-bottom: 1em;
+  outline: none;
+  resize: none;
+}
+
+.tweet-text-label {
+  font-weight: 600;
+}
+
+.button-counter {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-family: 'Bungee', cursive;
+}
+
+.button {
+  background-color: #4056A1;
+  color: #FFF;
+  border: none;
+}
