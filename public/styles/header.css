@@ -1,0 +1,26 @@
+header {
+  display: flex;
+  height: 530px;
+  width: 100%;
+  background-color: #cc8500;
+  background-image: url("https://www.transparenttextures.com/patterns/absurdity.png");
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  color: #FFFFFF;
+}
+
+.header-name {
+  align-self: center;
+  border: 1px solid black;
+  font-size: 1.3em;
+}
+
+.header-fullname {
+  font-weight: normal;
+  margin-top: 0;
+}
+
+.header-name-span {
+  font-weight: 600;
+}
