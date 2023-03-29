@@ -40,6 +40,8 @@
   color: red;
 }
 
+/* Rules for displaying tweets in tweet-container section */
+
 .tweet {
   display: flex;
   flex-direction: column;
@@ -60,7 +62,6 @@
   display: inline-flex;
   flex-direction: row;
   flex-grow: 2;
-  /* border: 1px solid black; */
   justify-content: space-between;
 }
 
