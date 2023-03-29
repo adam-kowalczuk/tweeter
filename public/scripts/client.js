@@ -76,7 +76,20 @@ $(() => {
   };
 
   //Render the tweets on initial load
-  renderTweets(tweets);
+  // renderTweets(tweets);
+
+  //Load tweets from server
+  const loadTweets = function() {
+    $.ajax({
+      method: 'GET',
+      url: '/tweets'
+    }).then((tweets) => {
+      console.log(tweets);
+      renderTweets(tweets);
+    });
+  };
+
+  loadTweets();
 
   //Grab the form from the DOM
   const $form = $('#new-tweet-form');
@@ -97,8 +110,8 @@ $(() => {
     }).then((newTweet) => {
       console.log(newTweet);
 
-      // Render the tweets again
-      renderTweets();
+      // Load the tweets again
+      loadTweets();
     });
   });
 
