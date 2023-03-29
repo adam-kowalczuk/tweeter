@@ -46,7 +46,6 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  /* height: 250px; */
   border: 4px solid black;
   background-color: transparent;
   padding: 1em 1em 0 1em;
@@ -97,7 +96,6 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  /* border: 1px solid black; */
   align-items: center;
   padding: 0 1em;
 }
