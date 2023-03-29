@@ -22,16 +22,19 @@ const tweets = [
     "user": {
       "name": "Descartes",
       "avatars": "https://i.imgur.com/nlhLi3I.png",
-      "handle": "@rd" },
+      "handle": "@rd"
+    },
     "content": {
       "text": "Je pense , donc je suis"
     },
     "created_at": 1461113959088
   }
-]
+];
 
 //Document Ready shorthand
 $(() => {
+  //Store tweet-container section in variable
+  const $tweetContainer = $("#tweet-container");
   //Create tweet using tweet template
   const createTweet = (tweet) => {
     const $tweet = $(`
@@ -64,9 +67,6 @@ $(() => {
     return $tweet;
   };
 
-  //Store tweet-container section in variable
-  const $tweetContainer = $("#tweet-container");
-
   //Loop through all tweets and append them to tweet container
   const renderTweets = function(tweets) {
     for (const tweet of tweets) {
@@ -77,6 +77,30 @@ $(() => {
 
   //Render the tweets on initial load
   renderTweets(tweets);
+
+  //Grab the form from the DOM
+  const $form = $('#new-tweet-form');
+
+  $form.on('submit', (event) => {
+    // Stop the browser from refreshing the page
+    event.preventDefault();
+
+    console.log('the form has submitted');
+    // Gives us back urlencoded data
+    const urlencoded = $form.serialize();
+    console.log(urlencoded);
+
+    $.ajax({
+      method: 'POST',
+      url: '/tweets',
+      data: urlencoded
+    }).then((newTweet) => {
+      console.log(newTweet);
+
+      // Render the tweets again
+      renderTweets();
+    });
+  });
 
 });
 
