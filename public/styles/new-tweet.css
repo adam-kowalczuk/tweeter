@@ -1,26 +1,5 @@
-/* Rules for displaying length-warning section */
-
-#length-warning {
-  display: none;
-}
-
-.warning {
-  width: 100%;
-  border: 4px solid red;
-  color: red;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-}
-
-.warning p {
-  font-weight: 600;
-}
-
-/* Rules for displaying new-tweet form  */
-
-.new-tweet {
-  width: 100%;
+#new-tweet-form {
+  margin-top: 2em;
 }
 
 #tweet-text {
@@ -33,6 +12,7 @@
   border-right-style: hidden;
   border-left-style: hidden;
   border-bottom: 4px solid black;
+  margin-top: 1em;
   margin-bottom: 1em;
   outline: none;
   resize: none;
@@ -61,78 +41,3 @@
   color: red;
 }
 
-/* Rules for displaying tweets in tweet-container section */
-
-.tweet {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  border: 4px solid black;
-  background-color: transparent;
-  padding: 1em 1em 0 1em;
-  margin-bottom: 2em;
-}
-
-.tweet:hover {
-  box-shadow: 10px 10px rgba(64, 86, 161, 0.5);
-}
-
-.tweet-header {
-  width: 100%;
-  display: inline-flex;
-  flex-direction: row;
-  flex-grow: 2;
-  justify-content: space-between;
-}
-
-.fa-user-astronaut {
-  margin-right: 0.5em;
-}
-
-.tweet-header-fullname {
-  display: flex;
-  align-items: center;
-}
-
-.tweet-header-fullname img {
-  margin-right: 0.5em;
-}
-
-.tweet-header-username {
-  font-weight: 600;
-  color: rgba(0, 0, 0, 0.25);
-}
-
-.tweet-text {
-  width: 100%;
-  flex-grow: 2;
-  border-bottom: 4px solid black;
-  font-weight: 600;
-  padding-left: 1em;
-}
-
-.tweet-footer {
-  font-size: 0.75em;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 1em;
-}
-
-.tweet-footer-days p {
-  font-weight: 600;
-}
-
-.tweet-footer-icons {
-  color: #4056A1;
-}
-
-.tweet-footer-icons i:nth-child(even) {
-  margin: 0 0.5em;
-}
-.tweet-footer-icons i:hover {
-  color: #cc8500;
-  cursor: pointer;
-}
