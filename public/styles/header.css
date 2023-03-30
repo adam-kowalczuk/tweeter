@@ -1,3 +1,5 @@
+/* Rules for displaying header */
+
 .main-header {
   display: flex;
   height: 530px;
