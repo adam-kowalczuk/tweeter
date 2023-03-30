@@ -5,6 +5,9 @@
  */
 
 //Hard-coded tweets array
+
+// import { format } from 'timeago.js';
+
 const tweets = [
   {
     "user": {
@@ -53,7 +56,7 @@ $(() => {
         </article>
         <footer class="tweet-footer">
           <div class="tweet-footer-days">
-            <p>${tweet.created_at}</p>
+            <p>${timeago.format(tweet.created_at)}</p>
           </div>
           <div class="tweet-footer-icons">
             <i class="fa-solid fa-flag"></i>
@@ -71,24 +74,27 @@ $(() => {
   const renderTweets = function(tweets) {
     for (const tweet of tweets) {
       const $tweet = createTweet(tweet);
-      $tweetContainer.append($tweet);
+      $tweetContainer.prepend($tweet);
     }
   };
 
-  //Render the tweets on initial load
+  // Render the tweets on initial load
   // renderTweets(tweets);
 
-  //Load tweets from server
+  // Load tweets from server
   const loadTweets = function() {
     $.ajax({
       method: 'GET',
       url: '/tweets'
     }).then((tweets) => {
       console.log(tweets);
+      //Remove all children from #tweet-container
+      $tweetContainer.empty();
       renderTweets(tweets);
     });
   };
 
+  //Load tweets on initial load
   loadTweets();
 
   //Grab the form from the DOM
