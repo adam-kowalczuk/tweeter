@@ -1,18 +1,29 @@
 # Tweeter Project
 
-Tweeter is a simple, single-page Twitter clone.
+Tweeter is a single-page app (SPA) made with jQuery and AJAX that allows users to post "tweets" under 140 characters (à la Twitter).
 
-This repository is the starter code for the project: Students will fork and clone this repository, then build upon it to practice their HTML, CSS, JS, jQuery and AJAX front-end skills, and their Node, Express back-end skills.
+## Final Product
 
-## Getting Started
-
-1. [Create](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template) a new repository using this repository as a template.
-2. Clone your repository onto your local device.
-3. Install dependencies using the `npm install` command.
-3. Start the web server using the `npm run local` command. The app will be served at <http://localhost:8080/>.
-4. Go to <http://localhost:8080/> in your browser.
+!["Tweeter was created using 'Mobile First' design principles"](https://github.com/adam-kowalczuk/tweeter/blob/master/docs/mobile.png?raw=true)
+!["A view of the app's desktop layout"](https://github.com/adam-kowalczuk/tweeter/blob/master/docs/desktop.png?raw=true)
+!["You'll be greeted with an error if you're not tweeting properly"](https://github.com/adam-kowalczuk/tweeter/blob/master/docs/error_message.png?raw=true) 
 
 ## Dependencies
 
+- Node.js
 - Express
-- Node 5.10.x or above
+- Body-Parser
+- Chance
+- MD5
+
+## Dev Dependencies
+
+- nodemon
+
+## Getting Started
+
+- Clone repository onto your local device.
+- Install dependencies using the `npm install` command.
+- Start the web server using the `npm run local` command. The app will be served at <http://localhost:8080/>.
+- Go to <http://localhost:8080/> in your browser.
+
