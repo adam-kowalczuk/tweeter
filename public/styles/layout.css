@@ -31,3 +31,15 @@ main{
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+
+ @media only screen and (min-width: 1024px) {
+  .header-main-container {
+    display: flex;
+    padding: 5em 2em 0 2em;
+  }
+
+  .main-content {
+    padding-top: 3rem;
+  }
+ }
+
