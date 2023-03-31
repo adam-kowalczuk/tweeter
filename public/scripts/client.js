@@ -65,7 +65,7 @@ $(() => {
       method: 'GET',
       url: '/tweets'
     }).then((tweets) => {
-      console.log(tweets);
+
       //Remove all children from #tweet-container
       $tweetContainer.empty();
       renderTweets(tweets);
@@ -88,12 +88,11 @@ $(() => {
   };
 
   $form.on('submit', (event) => {
-    // Stop the browser from refreshing the page
+    //Stop the browser from refreshing the page
     event.preventDefault();
 
     //Validate form by checking length, display warning if not valid
     const $formLength = $('textarea').val().length;
-    console.log($formLength);
 
     if ($formLength > 140) {
       const excessWarning = 'Please shorten your tweet to less than 140 characters';
@@ -116,20 +115,23 @@ $(() => {
     //Remove warning if visible and form input is valid
     $lengthWarning.slideUp(1000);
 
-    console.log('the form has submitted');
-    // Gives us back urlencoded data
+    //Gives back urlencoded data
     const urlencoded = $form.serialize();
-    console.log(urlencoded);
 
     $.ajax({
       method: 'POST',
       url: '/tweets',
       data: urlencoded
     }).then((newTweet) => {
-      console.log(newTweet);
 
-      // Load the tweets again
+      //Load the tweets again
       loadTweets();
+      
+      //Clear text from textarea
+      $('#tweet-text').val('');
+      //Reset counter to max length
+      $('output.counter').text(140);
+
     });
   });
 
