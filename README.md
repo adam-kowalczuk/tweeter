@@ -6,7 +6,7 @@ Tweeter is a single-page app (SPA) made with jQuery and AJAX that allows users t
 
 !["Tweeter was created using 'Mobile First' design principles"](https://github.com/adam-kowalczuk/tweeter/blob/master/docs/mobile.png?raw=true)
 !["A view of the app's desktop layout"](https://github.com/adam-kowalczuk/tweeter/blob/master/docs/desktop.png?raw=true)
-!["You'll be greeted with an error if you're not tweeting properly"](https://github.com/adam-kowalczuk/tweeter/blob/master/docs/error_message.png?raw=true) 
+!["A simple design for a world-changing message"](https://github.com/adam-kowalczuk/tweeter/blob/master/docs/tweet-box.png?raw=true) 
 
 ## Dependencies
 
