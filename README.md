@@ -1,6 +1,6 @@
 # Tweeter Project
 
-Tweeter is a single-page app (SPA) made with jQuery and AJAX that allows users to post "tweets" under 140 characters (à la Twitter).
+Tweeter is a single-page app (SPA) made with HTML, CSS, JavaScript, jQuery and AJAX that allows users to post "tweets" under 140 characters (à la Twitter).
 
 ## Final Product
 
