@@ -26,7 +26,7 @@
   <link rel="stylesheet" href="/styles/warning.css" type="text/css" />
   <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
   <link rel="stylesheet" href="/styles/tweet.css" type="text/css" />
-  
+
   <!-- External JS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js"></script>
@@ -42,40 +42,45 @@
     <span class="nav-logo">tweeter</span>
     <div class="nav-right">
       <p><span>Write</span> a new tweet</p>
-      <i class="fa-solid fa-angles-down"></i>
+      <button class="nav-button"><i class="fa-solid fa-angles-down"></i></button>
     </div>
   </nav>
 
-  <header class="main-header">
-    <div class="header-image">
-      <img src="/images/profile-hex.png">
-    </div>
-    <div class="header-name">
-      <h2 class="header-fullname"><span class="header-name-span">Amy</span> Mansell</h2>
-    </div>
-  </header>
-
-  <!-- Page-specific (main) content here -->
-  <main class="container">
-
-    <!-- Section for diplaying invalid length warning -->
-    <section id="length-warning"></section>
-
-    <section class="new-tweet">
-      <form id="new-tweet-form">
-        <label class="tweet-text-label" for="tweet-text">What are you humming about?</label>
-        <textarea name="text" id="tweet-text"></textarea>
-        <div class="button-counter">
-          <button class="button" type="submit">Tweet</button>
-          <output name="counter" class="counter" for="tweet-text">140</output>
+  <!-- Outer div activated in desktop layout -->
+  <div class="header-main-container">
+    <!-- Page header -->
+    <header class="main-header">
+        <div class="header-image-name">
+          <img class="header-image" src="/images/profile-hex.png">
+          <h2 class="header-fullname"><span class="header-name-span">Amy</span> Mansell</h2>
         </div>
-      </form>
-    </section>
+      </header>
+ 
 
-    <!-- Section for displaying tweets -->
-    <section id="tweet-container"></section>
+    <!-- Page-specific (main) content here -->
+    <main class="container">
 
-  </main>
+      <div class="main-content">
+        <!-- Section for diplaying invalid length warning -->
+        <section id="length-warning"></section>
+
+        <!-- New tweet textarea and counter -->
+        <section class="new-tweet">
+          <form id="new-tweet-form">
+            <label class="tweet-text-label" for="tweet-text">What are you humming about?</label>
+            <textarea name="text" id="tweet-text"></textarea>
+            <div class="button-counter">
+              <button class="button" type="submit">Tweet</button>
+              <output name="counter" class="counter" for="tweet-text">140</output>
+            </div>
+          </form>
+        </section>
+
+        <!-- Section for displaying tweets -->
+        <section id="tweet-container"></section>
+      </div>
+    </main>
+  </div>
 </body>
 
 </html>
