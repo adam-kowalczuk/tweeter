@@ -4,7 +4,8 @@ nav {
   display: flex;
   height: 120px;
   width: 100%;
-  background-color: #4056A1;
+  background-color: #cc8500;
+  background-image: url("https://www.transparenttextures.com/patterns/absurdity.png");
   color: #FFFFFF;
   padding: 0.5em 1.5em 0.5em 1.5em;
   flex-direction: row;
@@ -36,4 +37,21 @@ nav {
   margin-top: 0;
   color: red;
   align-self: center;
+}
+
+.nav-button {
+  background-color: transparent;
+  border: none;
+  transition: margin-top 1s ease-out;
+}
+
+.nav-button:hover {
+  cursor: pointer;
+  margin-top: 0.5em;
+}
+
+@media only screen and (min-width: 1024px) {
+  nav {
+    background-color: #4056A1;
+  }
 }
