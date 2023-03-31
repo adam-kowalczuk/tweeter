@@ -95,7 +95,7 @@ $(() => {
     const $formLength = $('textarea').val().length;
 
     if ($formLength > 140) {
-      const excessWarning = 'Please shorten your tweet to less than 140 characters';
+      const excessWarning = 'Please tweet less than 140 characters';
       const $warning = createWarning(excessWarning);
 
       $lengthWarning.html($warning);
@@ -126,7 +126,7 @@ $(() => {
 
       //Load the tweets again
       loadTweets();
-      
+
       //Clear text from textarea
       $('#tweet-text').val('');
       //Reset counter to max length
