@@ -42,12 +42,24 @@ nav {
 .nav-button {
   background-color: transparent;
   border: none;
-  transition: margin-top 1s ease-out;
+  animation: float 2s infinite ease;
 }
 
-.nav-button:hover {
-  cursor: pointer;
-  margin-top: 0.5em;
+@keyframes float {
+	0% {
+		transform: translateY(0);
+		-webkit-transform: translateY(0);
+	}
+
+	50% {
+		transform: translateY(0.5rem);
+		-webkit-transform: translateY(0.5rem);
+	}
+
+	100% {
+		transform: translateY(0);
+		-webkit-transform: translateY(0);
+	}
 }
 
 @media only screen and (min-width: 1024px) {
